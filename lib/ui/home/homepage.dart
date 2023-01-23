@@ -70,12 +70,15 @@ class _HomePageState extends State<HomePage> {
           ClipRect(
             clipBehavior: Clip.hardEdge,
             child: CustomPaint(
-              painter: FlipBookPainter(_offsets),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height:MediaQuery.of(context).size.height/2,
-                // color: Colors.red[50],
+                painter: FlipBookPainter(_offsets),
+                child: RotatedBox(
+                  quarterTurns: 4,
+                  child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height:MediaQuery.of(context).size.height/2,
+                  // color: Colors.red[50],
 
+                ),
               ),
             ),
           ),
